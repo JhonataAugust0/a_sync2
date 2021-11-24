@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projeto01/pages/details_page.dart';
 import 'package:projeto01/pages/home_page.dart';
 import 'package:projeto01/pages/login_page.dart';
 import 'package:projeto01/pages/splash_page.dart';
@@ -14,7 +15,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
+      debugShowCheckedModeBanner: false,
+      darkTheme: ThemeData(
         primarySwatch: Colors.green,
       ),
       initialRoute: '/splash',
@@ -22,6 +24,7 @@ class MyApp extends StatelessWidget {
         '/splash': (context) => const SplashPage(),
         '/loginPage': (context) => LoginPage(),
         '/home': (context) => const HomePage(),
+        '/details': (context) => DetailsPage(),
       },
     );
   }
